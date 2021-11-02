@@ -1,0 +1,37 @@
+NOTE: username: 'system', password: 'oracle'
+https://rolfje.wordpress.com/2007/01/16/lost-oracle-sys-and-system-password/
+
+SET LINESIZE 500
+SET PAGESIZE 1000
+SET SERVEROUT ON
+SET LONG 2000000
+COLUMN action_time FORMAT A12
+COLUMN action FORMAT A10
+COLUMN comments FORMAT A30
+COLUMN description FORMAT A60
+COLUMN namespace FORMAT A20
+COLUMN status FORMAT A10
+
+>>> sqlplus / as sysdba
+# change password for system
+SQL> show user;
+SQL> passw system;
+SQL> quit;
+
+>>> sqlplus / as system
+# change password for sys
+SQL> show user;
+SQL> passw sys;
+SQL> quit;
+
+
+# Find all users who have been granted the SYSDBA privilege.
+SQL> SELECT USERNAME FROM V$PWFILE_USERS WHERE USERNAME != 'SYS' AND SYSDBA='TRUE';
+
+# Revoke and then re-grant the SYSDBA privilege to these users.
+
+SQL> REVOKE SYSDBA FROM non-SYS-user;
+SQL> GRANT SYSDBA TO non-SYS-user;
+
+CREATE DATABASE practice DATAFILE SIZE 400M
+TEMPFILE SIZE 10M;
