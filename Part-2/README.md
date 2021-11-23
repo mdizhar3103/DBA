@@ -1,8 +1,8 @@
 ### More on Oracle Database
 
-**CDB**: Container Database, is the primary database that contains multiple plugged-in databases.
+- **CDB**: Container Database, is the primary database that contains multiple plugged-in databases.
     - Oracle System metadata in CDB$ROOT
-**PDB**: Pluggable Database, a set of schemas, objects, and non-schema objects that can be plugged and unplugged from a container database.
+- **PDB**: Pluggable Database, a set of schemas, objects, and non-schema objects that can be plugged and unplugged from a container database.
 
 ***Demo: Physical Architecture***
 ```bash
@@ -72,4 +72,4 @@ SQL> show parameter spfile;
 
 **Creating CDBs and PDBs:** *See create_cdb_pdb.md*
 
-
+**Local and Common Users Management:** *See user_management.md*

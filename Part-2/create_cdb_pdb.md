@@ -1,4 +1,4 @@
-**Using SQL *Plus to create CDB**
+**Using SQL Plus to create CDB**
 Steps to create Database Creation File:
 1. Create a Initialization file, for container database environement we must include the new parameter *ENABLE_PLUGGABLE_DATABASE* and set its value to true. Since, there is only a single CDB instance, so there is only one __spfile__
 2. Create instance with __STARTUP NOMOUNT__ command.
