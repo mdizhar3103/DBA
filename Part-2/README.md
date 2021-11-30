@@ -73,3 +73,5 @@ SQL> show parameter spfile;
 **Creating CDBs and PDBs:** *See create_cdb_pdb.md*
 
 **Local and Common Users Management:** *See user_management.md*
+
+**Managing CDBs and PDBs:** *See manage_dbs.md*
