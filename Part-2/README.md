@@ -75,3 +75,10 @@ SQL> show parameter spfile;
 **Local and Common Users Management:** *See user_management.md*
 
 **Managing CDBs and PDBs:** *See manage_dbs.md*
+
+**Managing Tablespaces:** *See manage_tbs.md*
+
+**Benefits of Multitenant Container Database**
+- Migration and Upgrade, Non-CDB
+- Physical Resources cost reduction, share common memory, process and other process. 
+- Rapid Movement of Code and Data
