@@ -89,3 +89,5 @@ RMAN> backup datafile datafile_name;
 
 **Recovery in CDB environemnt:** *See cdb_recovery.md*
 
+**Partial Recovery Using Flashback:** *See partial_recovery.md*
+
