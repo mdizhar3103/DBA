@@ -91,3 +91,5 @@ RMAN> backup datafile datafile_name;
 
 **Partial Recovery Using Flashback:** *See partial_recovery.md*
 
+**Connecting RMAN using SYSBACKUP:** *See rman_sysbackup.md*
+
