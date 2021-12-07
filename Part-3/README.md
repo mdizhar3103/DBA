@@ -93,3 +93,6 @@ RMAN> backup datafile datafile_name;
 
 **Connecting RMAN using SYSBACKUP:** *See rman_sysbackup.md*
 
+**Using Improvements of Multisection Backup:** *See multisection_backup.md*
+
+
