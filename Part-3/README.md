@@ -95,4 +95,4 @@ RMAN> backup datafile datafile_name;
 
 **Using Improvements of Multisection Backup:** *See multisection_backup.md*
 
-
+**Database Duplication Using New RMAN Enhancements:** *See duplication.md*
