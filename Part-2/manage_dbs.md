@@ -1,18 +1,19 @@
 ### Managing CDBs and PDBs
 __CDB Administrator:__
-    - Instance Performance
-    - Instance startup/shutdown
-    - Common Users
-    - Common objects
-    - Instance Security
-    - Instance backup/recovery
+- Instance Performance
+- Instance startup/shutdown
+- Common Users
+- Common objects
+- Instance Security
+- Instance backup/recovery
+
 __PDB Administrator:__
-    - Management of data
-    - Management of local user
-    - Management of local security
-    - PDB startup/shutdown
-    - PDB backup/recovery
-    - Application objects and issues
+- Management of data
+- Management of local user
+- Management of local security
+- PDB startup/shutdown
+- PDB backup/recovery
+- Application objects and issues
 
 ***Connecting to Container***
 ```SQL
@@ -148,6 +149,18 @@ SQL> startup open read write [restricted];
 SQL> startup open read only [restricted];
 SQL> startup upgrade;
 SQL> shutdown [immediate];
+
+--- You can start up a database in restricted mode.
+SQL> shutdown immediate;
+SQL> startup restrict;
+SQL> select logins from v$instance;
+    LOGINS
+    ----------
+    RESTRICTED
+    
+The good thing about this method is, that all users connected to the database will get disconnected when you shutdown the database. 
+These users will not be able to connect unless they have the RESTRICTED SESSION privilege.
+
 
 SQL> alter database open [read write] [read only] [upgrade];
 SQL> alter database open read only;
